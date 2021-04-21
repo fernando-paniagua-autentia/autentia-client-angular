@@ -1,0 +1,23 @@
+
+<div class="main-div">
+<div class="card">
+    <h3>NUEVO GASTO</h3>
+    <p class="center">
+        <input type="number" placeholder="Identificador Propietario" [(ngModel)]="idPropietario">
+    </p>
+    <p class="center">
+        <input type="number" placeholder="Identificador Usuario" [(ngModel)]="idUsuario">
+    </p>
+    <p class="center">
+        <input type="number" placeholder="Importe" [(ngModel)]="importe">
+    </p>
+    <p class="center">
+        <input type="text" placeholder="Descripción" [(ngModel)]="descripcion">
+    </p>
+    <p class="center">
+        <input type="date" placeholder="Fecha" [(ngModel)]="fecha">
+    </p>
+    <p class="center">
+        <button (click)="createShare()">Crear</button>
+    </p>
+</div>

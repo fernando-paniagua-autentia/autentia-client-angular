@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.main-div {
+    width: 30em;
+    margin: auto;
+}
+.menu {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.align-right {
+    text-align: right;
+}
+.pseudo-link{
+    color: green;
+}
+.pseudo-link:hover{
+    color: blue;
+    cursor: pointer;
+}

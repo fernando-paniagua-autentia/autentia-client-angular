@@ -1,0 +1,29 @@
+<h1>APP: {{ title }}</h1>
+<h2>Gastos compartidos</h2>
+<div class="main-div">
+    <div>
+        <app-user-list [users]="users"></app-user-list>
+    </div>
+    <div>
+        Gastos:
+    </div>
+    <div class="menu">
+        <div>
+            <div class="pseudo-link" (click)="showAmigoCard()" >Añadir amigo</div>
+        </div>
+        <div class="align-right">
+            <div class="pseudo-link" (click)="showGastoCard()" >Añadir gasto</div>
+        </div>
+    </div>
+    <div *ngIf="nuevoGasto">
+        <app-share (created)="cargarGastos()"></app-share>
+    </div>
+    <div *ngIf="nuevoAmigo">
+        <app-user></app-user>
+    </div>
+    <h3>GASTOS</h3>
+    <app-shares [shares]="shares"></app-shares>
+</div>
+
+
+
