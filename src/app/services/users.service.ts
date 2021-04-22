@@ -10,7 +10,6 @@ export class UsersService {
   constructor(private http: HttpClient) { }
   
   public getUsers(): Promise<User[]> {
-    let datos = this.http.get<User[]>(this.findAllUsers).toPromise();
-    return datos;
+    return this.http.get<User[]>(this.findAllUsers).toPromise();
   }
 }

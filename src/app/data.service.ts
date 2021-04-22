@@ -8,6 +8,7 @@ import { Share } from './shares/share';
 })
 export class DataService {
   findAllSharesURL = "shares/";
+  findSharesByIdURL = "shares/byGroup"
   createShareURL = "shares/";
   createUserURL = "users/";
   constructor(private http: HttpClient) { }
@@ -16,13 +17,17 @@ export class DataService {
     return this.http.get<Share[]>(this.findAllSharesURL).toPromise();
   }
 
+  public getSharesByID(idGroup:string): Promise<Share[]> {
+    return this.http.get<Share[]>(this.findSharesByIdURL, {
+      params: {
+        "groupOwnerId":idGroup
+      },
+    }).toPromise();
+  }
+
   public createUser(data:any): Observable<any> {
       return this.http.post(this.createUserURL, data);
   }
-
-  /*public createAmigo(amigo:Amigo): Promise<Amigo> {
-      return this.http.post<Amigo>(this.createAmigoURL, amigo).toPromise();
-  }*/
 
   public createShare(data:any): Observable<any> {
     return this.http.post(this.createShareURL, data);

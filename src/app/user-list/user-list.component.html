@@ -1,4 +1,4 @@
-<select class="dropped-down">
-<option *ngFor="let user of users" class="card" value={{user.id}}>{{user.nombre}}</option>
+<select class="dropped-down" #userId (change)="onChangeUser(userId.value)">
+<option *ngFor="let user of users" class="card" value={{user.id}} >{{user.nombre}}</option>
 </select>
 

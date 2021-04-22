@@ -1,10 +1,12 @@
-<div *ngFor="let share of shares" class="card">
-    <div class="double-row">
-        <div>{{ share.usuario.nombre }}</div>
-        <div class="right-align">{{ share.importe | currency:"EUR"}}</div>
-    </div>
-    <div class="double-row">
-        <div>{{ share.descripcion}}</div>
-        <div class="right-align">{{ share.fecha}}</div>
+<div class="card-container">
+    <div *ngFor="let share of shares" class="card">
+        <div class="double-row">
+            <div>{{ share.usuario.nombre }}</div>
+            <div class="right-align">{{ share.importe | currency:"EUR"}}</div>
+        </div>
+        <div class="double-row">
+            <div>{{ share.descripcion}}</div>
+            <div class="right-align">{{ share.fecha}}</div>
+        </div>
     </div>
 </div>

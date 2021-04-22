@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   async cargarGastos(): Promise<void> {
-    this.shares = await this.dataService.getShares();
+    this.shares = await this.dataService.getSharesByID("1");
   }
 
   async cargarUsuarios(): Promise<void> {
