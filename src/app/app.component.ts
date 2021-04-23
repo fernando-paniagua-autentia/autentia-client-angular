@@ -3,6 +3,7 @@ import { Share } from './shares/share';
 import { User } from './user/user';
 import { UsersService } from './services/users.service';
 import { DataService } from './data.service';
+import { Id } from './types/Id';
 
 @Component({
   selector: 'app-root',
@@ -36,10 +37,16 @@ export class AppComponent implements OnInit {
 
   async cargarGastos(): Promise<void> {
     this.shares = await this.dataService.getSharesByID("1");
+    this.nuevoGasto = false;
   }
 
   async cargarUsuarios(): Promise<void> {
     this.users = await this.usersService.getUsers();
     this.nuevoAmigo = false;
+  }
+
+  async onUserChanged(userId: Id) {
+    this.shares = await this.dataService.getSharesByID(userId);
+
   }
 }

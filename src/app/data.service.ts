@@ -24,6 +24,7 @@ export class DataService {
       },
     }).toPromise();
   }
+ 
 
   public createUser(data:any): Observable<any> {
       return this.http.post(this.createUserURL, data);

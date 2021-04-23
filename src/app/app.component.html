@@ -2,8 +2,8 @@
 <h2>Gastos compartidos</h2>
 <div class="main-div">
     <div>
-        <app-user-list [users]="users"></app-user-list>
-        <!--<app-user-list (created)="cargarGastos()"></app-user-list>-->
+        <app-user-list [users]="users" (changed)="onUserChanged($event)"></app-user-list>
+        <!--<app-user-list (selected)="cargarGastos()"></app-user-list>-->
     </div>
     <div>
         Gastos:
@@ -25,6 +25,3 @@
     <h3>GASTOS</h3>
     <app-shares [shares]="shares"></app-shares>
 </div>
-
-
-
