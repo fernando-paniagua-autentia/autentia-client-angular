@@ -3,7 +3,7 @@
 <div class="main-div">
     <div>
         <app-user-list [users]="users"></app-user-list>
-        <!--<app-user-list (created)="cargarUsuarios()"></app-user-list>-->
+        <!--<app-user-list (created)="cargarGastos()"></app-user-list>-->
     </div>
     <div>
         Gastos:
@@ -20,7 +20,7 @@
         <app-share (created)="cargarGastos()"></app-share>
     </div>
     <div *ngIf="nuevoAmigo">
-        <app-user></app-user>
+        <app-user (created)="cargarUsuarios()"></app-user>
     </div>
     <h3>GASTOS</h3>
     <app-shares [shares]="shares"></app-shares>

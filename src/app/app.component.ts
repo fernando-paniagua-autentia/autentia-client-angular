@@ -40,5 +40,6 @@ export class AppComponent implements OnInit {
 
   async cargarUsuarios(): Promise<void> {
     this.users = await this.usersService.getUsers();
+    this.nuevoAmigo = false;
   }
 }
